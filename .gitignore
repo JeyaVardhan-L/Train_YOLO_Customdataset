@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C environments and distributions
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Operating System Files
+.DS_Store
+desktop.ini
+Thumbs.db
+ehthumbs.db
+
+# IDE and Editor Files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ultralytics / YOLO runtime artifacts
+*.cache
+*.tmp*
+runs/detect/*/weights/*.tmp*
+
+# Base pretrained weights (auto-downloaded by Ultralytics on demand)
+/yolo*.pt
+
+# Keep trained model checkpoints
+!weights/*.pt
+!runs/**/weights/*.pt
