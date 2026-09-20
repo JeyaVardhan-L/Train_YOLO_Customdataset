@@ -1,7 +1,7 @@
 # Dataset configuration for Aerial / Sky Object Detection (Aircrafts, Birds, Drones)
 # Ground truth classes: 3 (verified against all 8,888 dataset annotations)
 
-path: data # Dataset directory relative to repository root
+path: ../data # Dataset directory relative to configs/ directory
 train: train/images
 val: validation/images
 

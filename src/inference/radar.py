@@ -19,6 +19,12 @@ class RadarHUD:
             size: Width and height of radar scope in pixels.
             ring_step: Distance in pixels between concentric range rings.
         """
+        if cv2 is None:
+            raise ImportError(
+                "The 'opencv-python' library is required for Radar HUD visualization. "
+                "Please install it using: pip install opencv-python"
+            )
+
         self.size = size
         self.center = (size // 2, size // 2)
         self.radius = (size // 2) - 15
