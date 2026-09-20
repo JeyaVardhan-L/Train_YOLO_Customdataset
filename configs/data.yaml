@@ -1,0 +1,20 @@
+# Dataset configuration for Aerial / Sky Object Detection (Aircrafts, Birds, Drones)
+# Ground truth classes: 3 (verified against all 8,888 dataset annotations)
+
+path: ../data # Dataset directory relative to configs/ directory
+train: train/images
+val: validation/images
+
+# Class mapping (0-indexed)
+names:
+  0: Aircrafts
+  1: Bird
+  2: Drone
+
+# Source attribution
+roboflow:
+  workspace: subhranil-dey-wttsv
+  project: drone-detection-axkso
+  version: 3
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/subhranil-dey-wttsv/drone-detection-axkso/dataset/3
