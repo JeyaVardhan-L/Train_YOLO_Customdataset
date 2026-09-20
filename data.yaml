@@ -1,9 +1,14 @@
-path: C:\Users\jeyas\OneDrive\Documents\yolo\data
-train: train\images
-val: validation\images
+# Dataset configuration for Aerial / Sky Object Detection
+# Maintained at root for backwards compatibility; canonical configuration is at configs/data.yaml
 
-nc: 3
-names: ['Aircrafts', 'Bird', 'Drone']
+path: data
+train: train/images
+val: validation/images
+
+names:
+  0: Aircrafts
+  1: Bird
+  2: Drone
 
 roboflow:
   workspace: subhranil-dey-wttsv
