@@ -13,7 +13,7 @@ The radar HUD (`scripts/radar_detect.py`) transforms standard optical camera fra
 |                                    |                 N                  |
 |                                    |                 |                  |
 |           OPTICAL FEED             |        W --- (  +  ) --- E         |
-|      [ Aircraft / Drone / Bird ]   |                 |                  |
+|      [ Aircrafts / Bird / Drone ]  |                 |                  |
 |                                    |                 S                  |
 |      Detections: 2 | FPS: 28.4     |   TACTICAL RADAR HUD | TRACKS: 2   |
 +------------------------------------+------------------------------------+

@@ -11,7 +11,7 @@ Two primary training runs were conducted using YOLO11 Small (`yolo11s.pt`) on th
 | **Run 1** (`train`) | YOLO11s | 35 | 16 | 640 | 0.8728 | 0.8325 | 0.8882 | 0.5496 | `runs/detect/train/` |
 | **Run 2** (`train2`) | YOLO11s | 57 | 16 | 640 | **0.8884** | **0.8442** | **0.9002** | **0.5648** | `runs/detect/train2/` |
 
-**Active Production Checkpoint**: `weights/best.pt` (sourced from Run 2, achieving **90.0% mAP@50** and **56.5% mAP@50-95**).
+**Default Model Checkpoint**: `weights/best.pt` (sourced from Run 2, achieving **90.0% mAP@50** and **56.5% mAP@50-95**).
 
 ---
 

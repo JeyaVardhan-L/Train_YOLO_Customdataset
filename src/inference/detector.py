@@ -104,10 +104,17 @@ class YOLOAirDetector:
             if confidence >= conf_threshold:
                 c_id = int(cls_id)
                 x1, y1, x2, y2 = map(int, xyxy)
+                if isinstance(self.names, dict):
+                    label = self.names.get(c_id, f"Class_{c_id}")
+                elif isinstance(self.names, (list, tuple)) and 0 <= c_id < len(self.names):
+                    label = self.names[c_id]
+                else:
+                    label = f"Class_{c_id}"
+
                 detections.append({
                     "box": (x1, y1, x2, y2),
                     "cls_id": c_id,
-                    "label": self.names.get(c_id, f"Class_{c_id}"),
+                    "label": label,
                     "conf": confidence,
                 })
 
