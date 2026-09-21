@@ -42,10 +42,9 @@ class YOLOAirDetector:
 
         self.model_path = Path(model_path)
         if not self.model_path.exists():
-            # Check fallback in runs/detect/train2/weights/best_2.pt or train/weights/best.pt
+            # Check canonical weights directory or standard base weights
             alt_paths = [
-                Path("runs/detect/train2/weights/best_2.pt"),
-                Path("runs/detect/train/weights/best.pt"),
+                Path("weights/best.pt"),
                 Path("yolo11s.pt"),
             ]
             for alt in alt_paths:

@@ -54,14 +54,8 @@ def main():
     args = parse_args()
     model_path = Path(args.model)
     if not model_path.exists():
-        # Fallback check
-        alt = Path("runs/detect/train2/weights/best_2.pt")
-        if alt.exists():
-            print(f"Notice: '{args.model}' not found, using '{alt}' instead.")
-            model_path = alt
-        else:
-            print(f"Error: Model checkpoint '{args.model}' does not exist.", file=sys.stderr)
-            sys.exit(1)
+        print(f"Error: Model checkpoint '{args.model}' does not exist.", file=sys.stderr)
+        sys.exit(1)
 
     print("=" * 60)
     print("RUNNING YOLO VALIDATION & EVALUATION")

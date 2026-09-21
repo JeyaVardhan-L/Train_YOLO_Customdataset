@@ -70,8 +70,8 @@ Evaluation performed on the 1,778-sample validation split at $640 \times 640$ re
 
 | Run Name | Architecture | Epochs | Precision | Recall | mAP@50 | mAP@50-95 | Checkpoint |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :--- |
-| Run 1 (`train`) | YOLO11s | 35 | 0.873 | 0.833 | 0.888 | 0.550 | `runs/detect/train/weights/best.pt` |
-| Run 2 (`train2`) | YOLO11s | 57 | **0.888** | **0.844** | **0.900** | **0.565** | `weights/best.pt` |
+| Run 1 (`train`) | YOLO11s | 35 | 0.873 | 0.833 | 0.888 | 0.550 | Intermediate benchmark |
+| Run 2 (`train2`) | YOLO11s | 57 | **0.888** | **0.844** | **0.900** | **0.565** | `weights/best.pt` (Canonical) |
 
 The checkpoint at `weights/best.pt` corresponds to Run 2. Full metrics, loss curves, and confusion matrix data are documented in [docs/experiments.md](docs/experiments.md).
 
@@ -113,7 +113,7 @@ Train_YOLO_Customdataset/
 ├── data/                      # 8,888 paired images and label files
 │   ├── train/                 # 7,110 samples
 │   └── validation/            # 1,778 samples
-└── runs/                      # Training run artifacts, curves, and logs
+└── runs/                      # Generated during training (gitignored)
 ```
 
 ---

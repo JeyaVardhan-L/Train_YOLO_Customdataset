@@ -45,14 +45,13 @@ ehthumbs.db
 # Jupyter Notebook checkpoints
 .ipynb_checkpoints
 
-# Ultralytics / YOLO runtime artifacts
+# Ultralytics / YOLO runtime and training artifacts
+runs/
 *.cache
 *.tmp*
-runs/detect/*/weights/*.tmp*
 
 # Base pretrained weights (auto-downloaded by Ultralytics on demand)
 /yolo*.pt
 
-# Keep trained model checkpoints
+# Keep canonical trained model checkpoint
 !weights/*.pt
-!runs/**/weights/*.pt
