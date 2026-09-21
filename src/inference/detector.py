@@ -42,10 +42,9 @@ class YOLOAirDetector:
 
         self.model_path = Path(model_path)
         if not self.model_path.exists():
-            # Check fallback in runs/detect/train2/weights/best_2.pt or train/weights/best.pt
+            # Check canonical weights directory or standard base weights
             alt_paths = [
-                Path("runs/detect/train2/weights/best_2.pt"),
-                Path("runs/detect/train/weights/best.pt"),
+                Path("weights/best.pt"),
                 Path("yolo11s.pt"),
             ]
             for alt in alt_paths:
@@ -104,10 +103,17 @@ class YOLOAirDetector:
             if confidence >= conf_threshold:
                 c_id = int(cls_id)
                 x1, y1, x2, y2 = map(int, xyxy)
+                if isinstance(self.names, dict):
+                    label = self.names.get(c_id, f"Class_{c_id}")
+                elif isinstance(self.names, (list, tuple)) and 0 <= c_id < len(self.names):
+                    label = self.names[c_id]
+                else:
+                    label = f"Class_{c_id}"
+
                 detections.append({
                     "box": (x1, y1, x2, y2),
                     "cls_id": c_id,
-                    "label": self.names.get(c_id, f"Class_{c_id}"),
+                    "label": label,
                     "conf": confidence,
                 })
 
